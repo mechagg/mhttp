@@ -97,11 +97,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mhttp\mhttp.vcxproj">
       <Project>{5273EE0F-BE87-16C1-8709-BA20F3DC12F2}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\util.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

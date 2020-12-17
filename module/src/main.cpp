@@ -2,6 +2,8 @@
 #include <mhttp.hpp>
 #include <GarrysMod/Lua/Interface.h>
 
+#include "util.hpp";
+
 using namespace GarrysMod::Lua;
 
 LUA_FUNCTION(mhttp_impl)
@@ -19,6 +21,8 @@ LUA_FUNCTION(mhttp_impl)
 
 GMOD_MODULE_OPEN()
 {
+	gmsv_mhttp::Log(LUA, "Hello, world!");
+
 	// Push the "mhttp" function onto the global stack.
 	LUA->PushSpecial(SPECIAL_GLOB);
 		LUA->PushCFunction(mhttp_impl);
