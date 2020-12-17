@@ -4,22 +4,41 @@
 #include <string>
 #include <iostream>
 
+void handleResults(mhttp::ThreadSafeQueue<mhttp::HttpRequest>* queue)
+{
+	while (true)
+	{
+		auto request = queue->Pop();
+		if (!request) continue;
+		auto rq = *request;
+		auto res = rq.Perform();
+
+		std::cout << res.body << std::endl;
+	}
+}
+
 int main()
 {
-	auto request = new mhttp::HttpRequest(mhttp::HttpRequestOptions{
+	mhttp::HttpRequest request(mhttp::HttpRequestOptions{
 		"https://jsonplaceholder.typicode.com/todos/1",
 		"GET",
 		std::map<std::string, std::string>(),
 	});
 
-	auto response = request->Perform();
+	mhttp::HttpRequest request2(mhttp::HttpRequestOptions{
+		"https://jsonplaceholder.typicode.com/todos/2",
+		"GET",
+		std::map<std::string, std::string>(),
+	});
 
-	if (response.error != "")
-		std::cout << "Error: " << response.error << std::endl;
+	mhttp::ThreadSafeQueue<mhttp::HttpRequest> queue;
 
-	std::cout << response.body << std::endl;
+	std::thread thread(handleResults, &queue);
 
-	delete request;
+	queue.Push(request);
+	queue.Push(request2);
+
+	thread.join();
 
 	return 0;
 }

@@ -18,11 +18,10 @@
     <ClInclude Include="src\Http\HttpResponse.hpp">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Client.h" />
+    <ClInclude Include="src\Core\Client.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mpch.cpp" />
-    <ClCompile Include="src\Queue\ThreadSafeQueue.cpp" />
     <ClCompile Include="src\Http\HttpRequest.cpp">
       <Filter>Core</Filter>
     </ClCompile>

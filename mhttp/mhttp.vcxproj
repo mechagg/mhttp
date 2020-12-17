@@ -100,7 +100,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\Client.h" />
+    <ClInclude Include="src\Core\Client.hpp" />
     <ClInclude Include="src\Http\HttpRequest.hpp" />
     <ClInclude Include="src\Http\HttpRequestOptions.hpp" />
     <ClInclude Include="src\Http\HttpResponse.hpp" />
@@ -114,7 +114,6 @@
     <ClCompile Include="src\mpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Queue\ThreadSafeQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\third_party\curl\libcurl.vcxproj">
