@@ -1,9 +1,9 @@
-project "module"
-    kind "SharedLib"
+project "sandbox"
+    kind "ConsoleApp"
     language "C++"
     cppdialect "C++17"
     staticruntime "On"
-
+    
     targetdir ("%{wks.location}/bin/" .. options.output_directory .. "/%{prj.name}")
     objdir ("%{wks.location}/obj/" .. options.output_directory .. "/%{prj.name}")
 
@@ -25,43 +25,14 @@ project "module"
 
     includedirs
     {
-        "src",
         "%{includes.mhttp}",
-        "%{includes.garrysmod}",
         "%{includes.libcurl}",
     }
 
-    filter "system:windows"
-        defines
-        {
-            "MHTTP_WINDOWS"
-        }
-
-        systemversion "latest"
-        targetname "gmsv_mhttp_win32"
-    
-    filter "system:linux"
-        defines
-        {
-            "MHTTP_LINUX"
-        }
-
-        targetname "gmsv_mhttp_linux"
-
     filter "configurations:Debug"
-        defines
-        {
-            "MHTTP_DEBUG"
-        }
-
         runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
-        defines
-        {
-            "MHTTP_RELEASE"
-        }
-
         runtime "Release"
         optimize "On"

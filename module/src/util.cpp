@@ -2,6 +2,7 @@
 
 namespace gmsv_mhttp
 {
+	// README: This could be replaced with a call to "Color" on _G.
 	// CreateColor returns a reference to a lua table that is a valid color.
 	int CreateColor(GarrysMod::Lua::ILuaBase *L, double r, double g, double b)
 	{

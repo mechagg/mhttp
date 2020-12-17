@@ -24,6 +24,14 @@ project "mhttp"
     includedirs
     {
         "src",
+        "%{includes.libcurl}",
+    }
+
+    links
+    {
+        "libcurl",
+        "Ws2_32",
+        "Wldap32",
     }
 
     filter "system:windows"

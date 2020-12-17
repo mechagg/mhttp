@@ -1,3 +1,5 @@
 #pragma once
 
-#include "Core/Request.hpp";
+#include "Http/HttpRequest.hpp"
+#include "Http/HttpRequestOptions.hpp"
+#include "Http/HttpResponse.hpp"

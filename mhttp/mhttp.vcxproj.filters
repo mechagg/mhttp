@@ -6,16 +6,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\Request.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\mhttp.hpp" />
     <ClInclude Include="src\mpch.hpp" />
+    <ClInclude Include="src\Queue\ThreadSafeQueue.hpp" />
+    <ClInclude Include="src\Http\HttpRequest.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Http\HttpRequestOptions.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Http\HttpResponse.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Client.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\Request.cpp">
+    <ClCompile Include="src\mpch.cpp" />
+    <ClCompile Include="src\Queue\ThreadSafeQueue.cpp" />
+    <ClCompile Include="src\Http\HttpRequest.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\mpch.cpp" />
+    <ClCompile Include="src\Core\Client.cpp" />
   </ItemGroup>
 </Project>

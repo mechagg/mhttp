@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mhttp", "mhttp\mhttp.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "module", "module\module.vcxproj", "{2BC7320E-1769-5DE4-0024-7138EC64E434}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sandbox", "sandbox\sandbox.vcxproj", "{145A6C82-8039-EB1D-8951-76F4F5AF517F}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "thirdparty", "thirdparty", "{77A2EB3C-639B-0A8F-8CCD-EF137825EA9A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcurl", "third_party\curl\libcurl.vcxproj", "{92946479-FE73-E314-078C-6EEB73EA4976}"
@@ -23,6 +25,10 @@ Global
 		{2BC7320E-1769-5DE4-0024-7138EC64E434}.Debug|Win32.Build.0 = Debug|Win32
 		{2BC7320E-1769-5DE4-0024-7138EC64E434}.Release|Win32.ActiveCfg = Release|Win32
 		{2BC7320E-1769-5DE4-0024-7138EC64E434}.Release|Win32.Build.0 = Release|Win32
+		{145A6C82-8039-EB1D-8951-76F4F5AF517F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{145A6C82-8039-EB1D-8951-76F4F5AF517F}.Debug|Win32.Build.0 = Debug|Win32
+		{145A6C82-8039-EB1D-8951-76F4F5AF517F}.Release|Win32.ActiveCfg = Release|Win32
+		{145A6C82-8039-EB1D-8951-76F4F5AF517F}.Release|Win32.Build.0 = Release|Win32
 		{92946479-FE73-E314-078C-6EEB73EA4976}.Debug|Win32.ActiveCfg = Debug|Win32
 		{92946479-FE73-E314-078C-6EEB73EA4976}.Debug|Win32.Build.0 = Debug|Win32
 		{92946479-FE73-E314-078C-6EEB73EA4976}.Release|Win32.ActiveCfg = Release|Win32

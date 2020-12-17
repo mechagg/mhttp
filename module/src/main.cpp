@@ -10,11 +10,17 @@ LUA_FUNCTION(mhttp_impl)
 {
 	LUA->CheckType(1, Type::String);
 
-	LUA->PushSpecial(SPECIAL_GLOB);
-		LUA->GetField(-1, "print");
-		LUA->Push(1);
-		LUA->Call(1, 0);
-	LUA->Pop();
+	std::string url = LUA->GetString(1);
+
+	auto request = new mhttp::HttpRequest(mhttp::HttpRequestOptions{
+		"https://jsonplaceholder.typicode.com/todos/1",
+		"GET",
+		std::vector<std::string>(),
+	});
+
+	request->Perform();
+
+	delete request;
 
 	return 0;
 }
