@@ -101,16 +101,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Client.hpp" />
-    <ClInclude Include="src\Http\HttpRequest.hpp" />
-    <ClInclude Include="src\Http\HttpRequestOptions.hpp" />
-    <ClInclude Include="src\Http\HttpResponse.hpp" />
+    <ClInclude Include="src\Core\Http\HttpRequest.hpp" />
+    <ClInclude Include="src\Core\Http\HttpRequestOptions.hpp" />
+    <ClInclude Include="src\Core\Http\HttpResponse.hpp" />
     <ClInclude Include="src\mhttp.hpp" />
     <ClInclude Include="src\mpch.hpp" />
-    <ClInclude Include="src\Queue\ThreadSafeQueue.hpp" />
+    <ClInclude Include="src\Util\ThreadSafeQueue.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Client.cpp" />
-    <ClCompile Include="src\Http\HttpRequest.cpp" />
+    <ClCompile Include="src\Core\Http\HttpRequest.cpp" />
     <ClCompile Include="src\mpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

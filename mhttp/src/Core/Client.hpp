@@ -3,7 +3,10 @@
 #include <thread>
 #include <string>
 
-namespace mhttp
+#include "Core/Http/HttpRequest.hpp"
+#include "Util/ThreadSafeQueue.hpp"
+
+namespace mhttp::Core
 {
 	class Client
 	{
@@ -12,7 +15,10 @@ namespace mhttp
 		~Client();
 
 		void Get(std::string url);
+		void Shutdown();
+		void Wait() const;
 	private:
-		std::thread m_requestThread;
+		Util::ThreadSafeQueue<Http::HttpRequest*> m_queue;
+		mutable std::thread m_requestThread;
 	};
 }

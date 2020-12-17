@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-namespace mhttp
+namespace mhttp::Core::Http
 {
 	struct HttpResponse
 	{

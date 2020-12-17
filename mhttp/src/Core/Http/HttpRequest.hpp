@@ -2,12 +2,12 @@
 
 #include <curl/curl.h>
 
-#include "Http/HttpRequestOptions.hpp"
-#include "Http/HttpResponse.hpp"
+#include "Core/Http/HttpRequestOptions.hpp"
+#include "Core/Http/HttpResponse.hpp"
 
 typedef size_t(*CURL_WRITEFUNCTION_PTR)(char*, size_t, size_t, void*);
 
-namespace mhttp
+namespace mhttp::Core::Http
 {
 	class HttpRequest
 	{

@@ -8,23 +8,23 @@
   <ItemGroup>
     <ClInclude Include="src\mhttp.hpp" />
     <ClInclude Include="src\mpch.hpp" />
-    <ClInclude Include="src\Queue\ThreadSafeQueue.hpp" />
-    <ClInclude Include="src\Http\HttpRequest.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Http\HttpRequestOptions.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Http\HttpResponse.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\Core\Client.hpp" />
+    <ClInclude Include="src\Core\Http\HttpRequest.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Http\HttpRequestOptions.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Http\HttpResponse.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\ThreadSafeQueue.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mpch.cpp" />
-    <ClCompile Include="src\Http\HttpRequest.cpp">
+    <ClCompile Include="src\Core\Client.cpp" />
+    <ClCompile Include="src\Core\Http\HttpRequest.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Client.cpp" />
   </ItemGroup>
 </Project>

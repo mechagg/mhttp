@@ -1,5 +1,5 @@
 #include "mpch.hpp"
-#include "HttpRequest.hpp"
+#include "Core/Http/HttpRequest.hpp"
 
 static std::string trim(const std::string& str)
 {
@@ -12,7 +12,7 @@ static std::string trim(const std::string& str)
 	return str.substr(first, (last - first + 1));
 }
 
-namespace mhttp
+namespace mhttp::Core::Http
 {
 	HttpRequest::HttpRequest(HttpRequestOptions options)
 		: m_options(options)

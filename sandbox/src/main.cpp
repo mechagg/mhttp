@@ -3,44 +3,21 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
-void handleResults(mhttp::ThreadSafeQueue<mhttp::HttpRequest*>* queue)
-{
-	while (true)
-	{
-		auto request = queue->Pop();
-		if (!request) continue;
-		auto rq = *request;
-		auto res = rq->Perform();
-
-		std::cout << res.body << std::endl;
-
-		delete rq;
-	}
-}
+#include <chrono>
 
 int main()
 {
-	auto request = new mhttp::HttpRequest(mhttp::HttpRequestOptions{
-		"https://jsonplaceholder.typicode.com/todos/1",
-		"GET",
-		std::map<std::string, std::string>(),
-	});
+	auto client = new mhttp::Core::Client();
 
-	auto request2 = new mhttp::HttpRequest(mhttp::HttpRequestOptions{
-		"https://jsonplaceholder.typicode.com/todos/2",
-		"GET",
-		std::map<std::string, std::string>(),
-	});
+	client->Get("https://jsonplaceholder.typicode.com/todos/1");
+	client->Get("https://jsonplaceholder.typicode.com/todos/2");
+	client->Get("https://jsonplaceholder.typicode.com/todos/3");
+	client->Get("https://jsonplaceholder.typicode.com/todos/4");
 
-	mhttp::ThreadSafeQueue<mhttp::HttpRequest*> queue;
+	client->Shutdown();
+	client->Wait();
 
-	std::thread thread(handleResults, &queue);
-
-	queue.Push(request);
-	queue.Push(request2);
-
-	thread.join();
+	delete client;
 
 	return 0;
 }

@@ -5,7 +5,7 @@
 #include <optional>
 #include <condition_variable>
 
-namespace mhttp 
+namespace mhttp::Util
 {
 	template <class T>
 	class ThreadSafeQueue

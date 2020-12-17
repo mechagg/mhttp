@@ -1,7 +1,9 @@
 #pragma once
 
-#include "Http/HttpRequest.hpp"
-#include "Http/HttpRequestOptions.hpp"
-#include "Http/HttpResponse.hpp"
+#include "Core/Client.hpp"
 
-#include "Queue/ThreadSafeQueue.hpp"
+#include "Core/Http/HttpRequest.hpp"
+#include "Core/Http/HttpRequestOptions.hpp"
+#include "Core/Http/HttpResponse.hpp"
+
+#include "Util/ThreadSafeQueue.hpp"
